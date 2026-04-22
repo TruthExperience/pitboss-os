@@ -1,0 +1,14 @@
+{
+  "name": "pitboss-os",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -w run dev",
+    "build": "pnpm -w run build",
+    "lint": "pnpm -w run lint"
+  }
+}
