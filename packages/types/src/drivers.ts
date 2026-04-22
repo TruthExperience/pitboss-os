@@ -20,4 +20,7 @@ export const DriverSeasonStatsSchema = z.object({
   wins: z.number().default(0),
   podiums: z.number().default(0),
   poles: z.number().default(0),
- 
+  created_at: z.string().datetime()
+});
+
+export type DriverSeasonStats = z.infer<typeof DriverSeasonStatsSchema>;
