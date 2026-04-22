@@ -5,8 +5,8 @@
   "types": "src/index.ts",
   "license": "MIT",
   "dependencies": {
-    "@pitboss/types": "1.0.0",
-    "@pitboss/shared": "1.0.0",
+    "@pitboss/types": "workspace:*",
+    "@pitboss/shared": "workspace:*",
     "zod": "^3.22.0"
   }
 }

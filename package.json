@@ -10,5 +10,8 @@
     "dev": "pnpm -w run dev",
     "build": "pnpm -w run build",
     "lint": "pnpm -w run lint"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.1.0"
   }
 }
