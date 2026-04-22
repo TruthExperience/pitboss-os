@@ -31,4 +31,23 @@ export async function POST(req: Request) {
 
 export async function PUT(req: Request) {
   try {
-    const
+    const body = await req.json();
+    const { incidentId, evidenceUrl, uploadedBy } = body;
+
+    if (!incidentId || !evidenceUrl) {
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    const updated = await addIncidentEvidence(incidentId, evidenceUrl, uploadedBy ?? null);
+
+    return NextResponse.json({ incident: updated });
+  } catch (err) {
+    return NextResponse.json(
+      { error: "Failed to add evidence" },
+      { status: 500 }
+    );
+  }
+}
