@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "packages/types/shared"
   ],
   "engines": {
     "node": "18"
